@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { error } from 'console';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -24,13 +25,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick() {
+  login() {
        this.auth$.loginWithGoogle()
         .then(response => {
            console.log(response);
            this.router.navigate(['home']);
          })
          .catch(error => console.log(error))
-     }
+     } 
+
+     
 
 }

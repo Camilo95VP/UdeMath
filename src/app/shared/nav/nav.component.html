@@ -1,0 +1,31 @@
+<nav class="fixed-nav">
+    <input type="checkbox" id="check" [checked]="isMenuOpen" (click)="toggleMenu()">
+    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <label for="check" class="closebtn" ><i class="fas fa-times"></i></label>
+    <a href="#" class="enlace">
+        <img src="../../../assets/img/logo.png" alt="" class="logo">
+    </a>
+    <ul [class.open]="isMenuOpen">
+      <li><a (click)="inicioRedirect()">INICIO</a></li>
+      <li>
+        <a (click)="videosRedirect()">VIDEOS</a>
+        <ul class="submenu">
+          <li><a href="#">Geometría</a></li>
+          <li><a href="#">Álgebra</a></li>
+          <li><a href="#">Cálculo</a></li>
+          <li><a href="#">Física</a></li>
+          <li><a href="#">T. conjuntos</a></li>
+          <li><a href="#">Lógica</a></li>
+          <li><a href="#">T. Números</a></li>
+        </ul>
+      </li>
+      <li><a href="#">MATERIAL</a></li>
+      <li><a href="#">FORO</a></li>
+      <li><a href="#">INFO</a></li>
+      <li><a class="salir" (click)="logout()">SALIR</a></li>
+    </ul>
+    
+  </nav>
+  <app-banner1></app-banner1>
+
+

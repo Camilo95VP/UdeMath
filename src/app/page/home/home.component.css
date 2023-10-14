@@ -1,0 +1,12 @@
+.cont{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top:140px
+}
+@media(max-width:767px){
+    .cont{
+        margin-top:80px
+    }
+}

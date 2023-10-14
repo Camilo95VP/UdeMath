@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider, AuthProvider } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -25,6 +25,11 @@ loginWithGoogle() {
 
 logout() {
   return signOut(this.auth);
+}
+
+async getUserAuth() {
+  const userData = await this.auth.currentUser;
+  return userData;
 }
 
 }

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .video-container {
+    margin: 20px;
+  }
+  
+  .description-container {
+    margin: 20px;
+  }
+  
+  .description-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .description-container p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  /* .cont{
+    display: flex;
+    align-items: center;
+  } */
+
+  .video-container iframe{
+    width:560px; 
+    height:315px
+  }
+  .cont{
+    width:90%;
+    margin: auto;
+  }
+  @media(max-width:650px){
+    .video-container iframe{
+        width:95%; 
+        height:150px
+      }
+  }
+  
