@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './page/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +27,7 @@ import { InicioComponent } from './page/inicio/inicio.component';
   ],
   imports: [
     BrowserModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     AppRoutingModule,
   ],
