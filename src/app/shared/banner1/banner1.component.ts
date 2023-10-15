@@ -27,4 +27,7 @@ export class Banner1Component implements OnInit {
     this.email = this.currentUser?.email
   }
 
+  setDefaultImage() {
+    this.foto = 'URL_IMAGEN_POR_DEFECTO';
+  }
 }

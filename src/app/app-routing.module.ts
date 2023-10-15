@@ -7,6 +7,7 @@ import { HomeComponent } from './page/home/home.component';
 import { AuthGuard, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { VideosComponent } from './page/videos/videos.component';
 import { InicioComponent } from './page/inicio/inicio.component';
+import { CuentaComponent } from './page/cuenta/cuenta.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToDashboard = () => redirectLoggedInTo(['home']);
@@ -30,12 +31,16 @@ const routes: Routes = [
     component: VideosComponent,
     canActivate: [AuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin }
-  }
-  ,
+  },
   {
     path: 'inicio',
     component: InicioComponent,
     canActivate: [AuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path: 'cuenta',
+    component: CuentaComponent,
     data: { authGuardPipe: redirectUnauthorizedToLogin }
   }
   

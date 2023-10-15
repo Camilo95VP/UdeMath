@@ -11,47 +11,6 @@
     -moz-box-shadow: 1px 1px 0px 48px rgba(0,0,0,1);
     box-shadow: 1px 1px 0px 48px rgba(0,0,0,1);
 }
-a{
-    cursor: pointer;
-}
-.cont{
-    text-align: center;
-    color: white;
-}
-
-.google-button {
-    background-color: #bbbbbb;
-    color: #000000;
-    border: 2px solid #000000;
-    padding: 10px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin: 10px 0;
-}
-.google-button:hover {
-    background-color: #ffffff;
-}
-
-.google-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.create-account {
-    text-decoration: none;
-    color: #80aff1;
-    font-size: 14px;
-    margin-top: 10px;
-}
-.create-account:hover {
-    text-decoration: underline #80aff1;;
-  }
 .form {
     display: flex;
     flex-direction: column;
@@ -112,6 +71,7 @@ a{
   
   .signin a {
     color: #80aff1;;
+    cursor: pointer;
   }
   
   .signin a:hover {
@@ -190,4 +150,5 @@ a{
       opacity: 0;
     }
   }
+  
   

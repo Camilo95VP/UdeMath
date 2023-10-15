@@ -1,11 +1,30 @@
 <div class="container">
-  <div class="cont">
-    <img src="../../../assets/img/logo.png" alt="" style="border-radius: 8px; width: 285px" >
-    <a href="#" class="google-button" (click)="login()" >
-        <img class="google-icon" src="../../../assets/img/google.png" alt="Google Icon">
-        Iniciar Sesión con Google 
-      </a>
-    <a class="create-account" >Crear cuenta nueva</a>
+  <form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <p class="title">Login </p>
+    <img src="../../../assets/img/logo.png" alt="" style="border-radius: 8px; width: 80px; height: 30px">
+    <p class="message">Signup now and get full access to our app. </p>
 
-  </div>
+    <label>
+      <input class="input" type="email" placeholder="" required="" formControlName="email">
+      <span>Email</span>
+    </label>
+
+    <label>
+      <input class="input" type="password" placeholder="" required="" formControlName="password">
+      <span>Password</span>
+    </label>
+
+    <button class="submit">Ingresar</button>
+    <a href="#" class="google-button" (click)="login()">
+      <img class="google-icon" src="../../../assets/img/google.png" alt="Google Icon">
+      Iniciar Sesión con Google
+    </a>
+    <a class="create-account" (click)="cuentaRedirect()">Crear cuenta nueva</a>
+  </form>
+
 </div>
+
+
+
+
+
