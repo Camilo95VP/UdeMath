@@ -8,3 +8,7 @@ body {
     background-attachment: fixed;
     color: white;
 }
+.noscroll {
+    overflow: hidden;
+  }
+  

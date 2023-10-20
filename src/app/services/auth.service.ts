@@ -1,5 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider, AuthProvider } from '@angular/fire/auth';
+import { 
+  Auth, 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword, 
+  signOut, 
+  signInWithPopup, 
+  GoogleAuthProvider, 
+  AuthProvider,
+  GithubAuthProvider,
+ } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -21,6 +30,10 @@ login({ email, password }: any) {
 
 loginWithGoogle() {
   return signInWithPopup(this.auth, new GoogleAuthProvider());
+}
+
+loginWithGitHub(){
+  return signInWithPopup(this.auth, new GithubAuthProvider());
 }
 
 logout() {

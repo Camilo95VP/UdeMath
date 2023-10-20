@@ -31,7 +31,6 @@ a{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin: 10px 0;
 }
 .google-button:hover {
     background-color: #ffffff;
@@ -190,4 +189,19 @@ a{
       opacity: 0;
     }
   }
-  
+  #github{
+    background-color: rgba(62, 62, 62, 0.826);
+    color: white;
+  }
+  #github:hover{
+    background-color: rgba(0, 0, 0, 0.685);    
+  }
+  #githubimg{
+    width: 35px;
+    height: 24px;
+  }
+  .cont-btns{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 7px;
+  }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
+import { error } from 'console';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -31,16 +32,35 @@ export class LoginComponent implements OnInit {
   login() {
     this.auth$.loginWithGoogle()
       .then(response => {
-        this.toastr.success('Good job! 😎');
+        this.toastr.success('Logueado con google 😎');
 
         console.log(response);
         this.router.navigate(['home']);
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        if (error.code === 'auth/account-exists-with-different-credential') {
+          this.toastr.error('El correo ya está en uso con su cuenta de github', 'Error');
+        }
+      }
+      )
   }
 
   cuentaRedirect() {
     this.router.navigate(['cuenta'])
+  }
+
+  loginWithGitHubBtn() {
+    this.auth$.loginWithGitHub()
+      .then(response => {
+        this.toastr.success('Logueado con git hub 🖤');
+        console.log(response);
+        this.router.navigate(['home'])
+      }).catch(error => {
+        if (error.code === 'auth/account-exists-with-different-credential') {
+          this.toastr.error('El correo ya está en uso con su cuenta de google', 'Error');
+        }
+      })
+
   }
 
   onSubmit() {

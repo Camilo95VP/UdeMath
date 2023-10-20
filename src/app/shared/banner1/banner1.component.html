@@ -1,13 +1,24 @@
-<div class="cont1">
+<!-- <div class="overlay" [ngClass]="{'visible': menuVisible}" (click)="toggleMenu()"></div>
+
+<div class="cont1"> -->
   <div class="cont2">
     <div class="live"></div>
     <p>live</p>
   </div>
-  <div class="cont3">
+  <!-- <div class="cont3">
     <div class="cont4text">
       <p>{{nombre}}</p>
       <p>{{email}}</p>
     </div>
+    <div  class="menulateral" (click)="toggleMenu()">
     <img [src]="foto || '../../../assets/img/avatar.png'" alt="Avatar" (error)="setDefaultImage()">
   </div>
+  </div>
 </div>
+
+<div class="menu-lateral" *ngIf="menuVisible">
+  <img [src]="foto || '../../../assets/img/avatar.png'" alt="Avatar" (error)="setDefaultImage()">
+  <button (click)="toggleMenu()" >Cerrar</button>
+  <p>{{email}}</p>
+  <a (click)="eliminarCuenta()">Eliminar cuenta</a>
+</div> -->

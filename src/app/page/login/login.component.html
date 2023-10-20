@@ -15,16 +15,18 @@
     </label>
 
     <button class="submit">Ingresar</button>
+    <div> <hr> </div>
+    <div class="cont-btns">
     <a href="#" class="google-button" (click)="login()">
       <img class="google-icon" src="../../../assets/img/google.png" alt="Google Icon">
-      Iniciar Sesión con Google
+      Google
     </a>
-    <a class="create-account" (click)="cuentaRedirect()">Crear cuenta nueva</a>
+    <a href="#" id="github" class="google-button" (click)="loginWithGitHubBtn()">
+      <img id="githubimg" class="google-icon" src="../../../assets/img/logithub.png" alt="Google Icon">
+      Github
+    </a>
+  </div>
+   <p class="signin" >Don't have an account?<a class="create-account" (click)="cuentaRedirect()"> Crear cuenta nueva</a></p> 
   </form>
 
 </div>
-
-
-
-
-
