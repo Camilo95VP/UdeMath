@@ -1,0 +1,245 @@
+.cont1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 15px;
+    color: black;
+}
+
+.cont2 {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.cont2 p{
+    color:wheat
+}
+.live{
+    height:8px;
+    width:8px;
+    background-color: #9FE917;
+    border-radius: 50%;
+}
+
+.cont3 {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cont4text {
+    font-size: 10px;
+    text-align: right;
+    padding-right: 7px;
+}
+.cont3 img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+@media(max-width:767px) {
+    .cont1 {
+        margin-top: 100px;
+    }
+    .cont2 p{
+        font-size:11px
+    }
+}
+
+  
+  .menu-lateral img {
+    max-width: 70px;
+    max-height: 70px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .menulateral{
+    cursor: pointer;
+    background-color: #8080803b;
+justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+ 
+  .menulateral img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .info{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    font-size: 10px;
+
+  }
+  .info p {
+color: rgba(154, 154, 154, 0.977);
+  }
+  .noscroll {
+    overflow: hidden;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.523); /* Fondo semitransparente oscuro */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Inicialmente oculta la capa */
+
+  }
+  
+  .overlay.visible {
+    display: block; /* Muestra la capa cuando el menú está abierto */
+  }
+
+  .menu-lateral a{
+    color: rgb(241, 66, 66);
+  }
+  .menu-lateral {
+    position: absolute;
+    top: 0;
+    right: 0px; /* Empieza oculto */
+    width: 330px;
+    height: 100vh;
+    background-color: #000000ec;
+    transition: right 0.3s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2000;
+    justify-content: space-between;
+  }
+  .info1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .info1 button{
+    cursor: pointer;
+  }
+  .info2{
+    display: grid;
+    margin-top: 20px;
+  }
+  .info2 p{
+    font-size: 10px;
+  }
+  .p1{
+    color: wheat;
+  }
+  .p2{
+    color: rgb(181, 181, 181);
+  }
+  .info3{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .info3 a{
+    font-size: 10px;
+  }
+  .button {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #9d1a2d;
+    transition: all 0.2s ease;
+  }
+  
+  .button:active {
+    transform: scale(0.96);
+  }
+  
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #9d1a2d 20%, transparent 30%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #9d1a2d 15%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #9d1a2d 15%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%),
+      radial-gradient(circle, #9d1a2d 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
